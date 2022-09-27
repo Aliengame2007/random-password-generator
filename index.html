@@ -11,19 +11,29 @@
                 <h1 class="fw-bold fs-heading">Generate a <span class="clr-secondary-text">random password</span></h1>
                 <p class="fw-regular fs-paragraph clr-paragraph">Never use an insecure password again</p>
                 <div class="input-container">
-                    <label class="clr-paragraph">Number of characters: </label><br>
-                    <input type="text" class="input-text"><br>
+                    <label class="clr-paragraph">Number of characters: </label>
+                    <br>
+                    <input type="text" class="input-text">
+                    <br>
                 </div>
                 <div class="toggle-container">
-                    <label class="toggle" for="myToggle">
-                        <input class="toggle-input" type="checkbox" id="myToggle">
+                    <span class="toggle-switch-span | clr-paragraph">Numbers</span>
+                    <label class="toggle" for="myToggle-1">
+                        <input class="toggle-input" type="checkbox" id="myToggle-1">
                         <div class="toggle-fill"></div>
                     </label>
-                    <button class="submit-btn | clr-button clr-button-bg fw-button fs-button">Submit</button>
+                    <span class="toggle-switch-span | clr-paragraph">Symbols</span>
+                    <label class="toggle" for="myToggle-2">
+                        <input class="toggle-input" type="checkbox" id="myToggle-2">
+                        <div class="toggle-fill"></div>
+                    </label>
                 </div>
+                <br>
+                <button class="submit-btn | clr-button clr-button-bg fw-button fs-button">Submit</button>
+                <br>
                 <button class="button | clr-button clr-button-bg fw-button fs-button">Generate passwords</button>
                 <div class="h-row"></div>
-                <div class="flex-container">
+                <div class="password-container">
                     <div class="password | left clr-secondary-text clr-password-bg fw-password fs-password"></div>
                     <div class="password | right clr-secondary-text clr-password-bg fw-password fs-password"></div>
                 </div>
