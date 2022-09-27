@@ -21,6 +21,10 @@
     --fs-600: 2.5rem;
     
     --fs-media-heading: 2rem;
+
+    --width: 100px;
+    --height: calc(var(--width) / 2);
+    --border-radius: calc(var(--height) / 2);
 }
 
 body {
@@ -62,6 +66,53 @@ body {
 
 .input-text:focus {
     outline: 2px solid var(--clr-secondary-text);
+}
+
+/* Toggle Switch*/
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-fill {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: #dddddd;
+    transition: background 0.2s;
+}
+
+.toggle-input:checked ~ .toggle-fill {
+    background: var(--clr-secondary-text);
+}
+
+.toggle-fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+}
+
+.toggle-input:checked ~ .toggle-fill::after {
+    transform: translateX(var(--height));
 }
 
 /* Button */
